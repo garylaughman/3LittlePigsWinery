@@ -15,9 +15,24 @@
 ##Development
 
 ###Setup
+* Download the files and place them in your project directory
+* Install the dependencies
 ```bash
 npm install
 ```
+* To build the project
 ```bash
-npm start
+npm run build
+```
+* To build the project, start watching files and run the local server
+```bash
+npm run dev
+```
+* To run the tests once
+```bash
+npm test
+```
+* To watch the src directory for changes and run the tests
+```bash
+npm run test:ci
 ```
