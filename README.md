@@ -1,8 +1,23 @@
-# 3LittlePigsWinery
+# 3 Little Pigs Winery
 
-Useful links
- - https://github.com/coryhouse/react-flux-starter-kit
+##Info
+| Name | URL |
+| ---- | --- |
+| Website | [3 Little Pigs Winery](http://www.3littlepigswinery.com) |
+| Source Repo | [GitHub](https://github.com/garylaughman/3LittlePigsWinery.git) |
 
-Run 'npm install'
+###Contacts
+| Name | Role | Email |
+| ---- | ---- | ----- |
+| Gary Laughman | Winemaker | glaughman1@woh.rr.com |
+| Gary Laughman II | Developer | garylaughman@gmail.com |
 
-Run 'gulp'
+##Development
+
+###Setup
+```bash
+npm install
+```
+```bash
+npm start
+```
