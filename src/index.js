@@ -1,10 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Component from './components/Component';
+import GaryBlock from './components/GaryBlock';
 
-window.onload = () => {
+const rootEl = document.getElementById('app');
+
+const render = () => {
   ReactDOM.render(
-    <Component />,
-    document.querySelector('#container')
+    <GaryBlock />,
+    rootEl
   );
 };
+
+// if (module.hot) {
+//   module.hot.accept('./components', () => {
+//     setTimeout(render, 0);
+//   });
+// }
+
+render();
+
+
+// window.onload = () => {
+//   ReactDOM.render(
+//     <Component />,
+//     document.querySelector('#container')
+//   );
+// };

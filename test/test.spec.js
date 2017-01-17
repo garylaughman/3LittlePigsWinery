@@ -1,4 +1,4 @@
-import Component from '../src/components/Component.jsx';
+import Component from '../src/components/GaryBlock.js';
 import TestUtils from 'react-addons-test-utils';
 import React from 'react';
 
