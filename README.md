@@ -20,19 +20,11 @@
 ```bash
 npm install
 ```
-* To build the project
+* Run the project
 ```bash
-npm run build
+npm start
 ```
-* To build the project, start watching files and run the local server
+* Build for production
 ```bash
-npm run dev
-```
-* To run the tests once
-```bash
-npm test
-```
-* To watch the src directory for changes and run the tests
-```bash
-npm run test:ci
+npm build
 ```

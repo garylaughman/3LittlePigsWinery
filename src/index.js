@@ -11,18 +11,4 @@ const render = () => {
   );
 };
 
-// if (module.hot) {
-//   module.hot.accept('./components', () => {
-//     setTimeout(render, 0);
-//   });
-// }
-
 render();
-
-
-// window.onload = () => {
-//   ReactDOM.render(
-//     <Component />,
-//     document.querySelector('#container')
-//   );
-// };

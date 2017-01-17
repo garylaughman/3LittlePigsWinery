@@ -3,6 +3,7 @@ public
 tmp
 lib
 .idea
+build/assets
 
 # Created by https://www.gitignore.io
 

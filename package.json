@@ -4,12 +4,12 @@
   "description": "3 Little Pigs Winery",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --watch --inline",
-    "build": "./node_modules/.bin/webpack --config=webpack.build.config.js",
+    "start": "rm -rf build/assets && node server.js",
+    "build": "rm -rf build/assets && NODE_ENV=production ./node_modules/.bin/webpack -p --config=webpack.production.config.js",
+    "lint": "eslint src/**/*.js && echo 'eslint Success!'",
     "nibble": "eslint-nibble src/**/*.js",
     "test": "karma start",
-    "test:ci": "watch 'npm run test' src/",
-    "start": "node bin/server.js"
+    "test:ci": "watch 'npm run test' src/"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "core-js": "1.1.4",
     "eslint": "1.4.3",
     "eslint-loader": "1.0.0",
+    "eslint-nibble": "3.1.0",
     "eslint-plugin-react": "3.4.1",
     "html-webpack-plugin": "2.26.0",
     "karma": "0.13.19",
@@ -54,6 +55,7 @@
     "react": "15.2.0",
     "react-addons-test-utils": "15.2.0",
     "react-dom": "15.2.0",
+    "stylelint-webpack-plugin": "0.5.1",
     "watch": "0.16.0",
     "webpack": "1.12.2",
     "webpack-dev-server": "1.11.0"
