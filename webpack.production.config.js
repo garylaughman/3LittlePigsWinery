@@ -3,6 +3,8 @@ var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public', 'assets');
 var mainPath = path.resolve(__dirname, 'src', 'index.js');
+var combineLoaders = require('webpack-combine-loaders');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
 
@@ -20,9 +22,20 @@ var config = {
             exclude: [nodeModulesPath]
         },{
             test: /\.css$/,
-            loader: 'style!css'
+            loader: ExtractTextPlugin.extract(
+                combineLoaders([{
+                    loader: 'css-loader',
+                    query: {
+                        modules: true,
+                        localIdentName: '[name]__[local]___[hash:base64:5]'
+                    }
+                }])
+            )
         }]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('styles-[hash].css'),
+    ]
 };
 
 module.exports = config;

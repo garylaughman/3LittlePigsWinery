@@ -4,6 +4,7 @@ var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public', 'assets');
 var mainPath = path.resolve(__dirname, 'src', 'index.js');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+var combineLoaders = require('webpack-combine-loaders');
 
 var config = {
 
@@ -61,7 +62,18 @@ var config = {
             // expand with less-loader etc.
             {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: combineLoaders([
+                    {
+                        loader: 'style-loader'
+                    }, {
+                        loader: 'css-loader',
+                        query: {
+                            modules: true,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    }
+                ]),
+                exclude: [nodeModulesPath]
             }
 
         ]
@@ -70,7 +82,7 @@ var config = {
     // We have to manually add the Hot Replacement plugin when running
     // from Node
     plugins: [
-        new Webpack.HotModuleReplacementPlugin()
+        new Webpack.HotModuleReplacementPlugin(),
     ]
 };
 

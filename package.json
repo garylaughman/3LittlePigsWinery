@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/garylaughman/3LittlePigsWinery#readme",
   "dependencies": {
-
+    "react": "15.2.0",
+    "react-dom": "15.2.0"
   },
   "devDependencies": {
     "babel": "6.5.2",
@@ -36,10 +37,12 @@
     "babel-preset-react": "6.5.0",
     "chai": "3.3.0",
     "core-js": "1.1.4",
+    "css-loader": "0.23.1",
     "eslint": "1.4.3",
     "eslint-loader": "1.0.0",
     "eslint-nibble": "3.1.0",
     "eslint-plugin-react": "3.4.1",
+    "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.26.0",
     "karma": "0.13.19",
     "karma-chai": "0.1.0",
@@ -56,12 +59,12 @@
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "pre-push": "0.1.1",
-    "react": "15.2.0",
     "react-addons-test-utils": "15.2.0",
-    "react-dom": "15.2.0",
+    "style-loader": "0.13.1",
     "stylelint-webpack-plugin": "0.5.1",
     "watch": "0.16.0",
-    "webpack": "1.12.2",
+    "webpack": "1.14.0",
+    "webpack-combine-loaders": "2.0.3",
     "webpack-dev-server": "1.11.0"
   },
   "pre-push": [
