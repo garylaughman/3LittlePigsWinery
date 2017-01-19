@@ -4,8 +4,8 @@
   "description": "3 Little Pigs Winery",
   "main": "lib/index.js",
   "scripts": {
-    "start": "rm -rf build/assets && node server.js",
-    "build": "rm -rf build/assets && NODE_ENV=production ./node_modules/.bin/webpack -p --config=webpack.production.config.js",
+    "start": "rm -rf public/assets && node server.js",
+    "build": "rm -rf public/assets && NODE_ENV=production ./node_modules/.bin/webpack -p --config=webpack.production.config.js",
     "lint": "eslint src/**/*.js && echo 'eslint Success!'",
     "nibble": "eslint-nibble src/**/*.js",
     "test": "karma start",
@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/garylaughman/3LittlePigsWinery#readme",
   "dependencies": {
+
+  },
+  "devDependencies": {
     "babel": "6.5.2",
     "babel-core": "6.6.5",
     "babel-eslint": "5.0.0",
@@ -52,6 +55,7 @@
     "karma-webpack": "1.7.0",
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
+    "pre-push": "0.1.1",
     "react": "15.2.0",
     "react-addons-test-utils": "15.2.0",
     "react-dom": "15.2.0",
@@ -60,7 +64,8 @@
     "webpack": "1.12.2",
     "webpack-dev-server": "1.11.0"
   },
-  "devDependencies": {
-
-  }
+  "pre-push": [
+    "lint",
+    "test"
+  ]
 }

@@ -10,11 +10,11 @@ describe('Given an instance of the Component', () => {
     before(() => {
       component = TestUtils.renderIntoDocument(<GaryBlock />);
     });
-    it.skip('should render a paragraph', () => {
+    it('should render a paragraph', () => {
       var paragraph = TestUtils.scryRenderedDOMComponentsWithTag(component, 'p');
-
+      console.log(paragraph);
       expect(paragraph).to.have.length.above(0, 'Expected to have element with tag <p>');
-      expect(spy).to.be.calledOnce;
+      // expect(spy).to.be.calledOnce;
     });
   });
 });

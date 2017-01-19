@@ -1,9 +1,8 @@
 # Build ...
-public
+public/assets
 tmp
 lib
 .idea
-build/assets
 
 # Created by https://www.gitignore.io
 

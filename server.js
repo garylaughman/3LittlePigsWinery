@@ -11,7 +11,7 @@ var app = express();
 
 var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3000;
-var publicPath = path.resolve(__dirname, 'build');
+var publicPath = path.resolve(__dirname, 'public');
 
 app.use(express.static(publicPath));
 
